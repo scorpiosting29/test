@@ -1,79 +1,401 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--
-# This Source Code Form is subject to the terms of the Mozilla Public
-# License, v. 2.0. If a copy of the MPL was not distributed with this
-# file, You can obtain one at http://mozilla.org/MPL/2.0/.
--->
-<!DOCTYPE html [
-  <!ENTITY % htmlDTD PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "DTD/xhtml1-strict.dtd">
-  %htmlDTD;
-  <!ENTITY % globalDTD SYSTEM "chrome://global/locale/global.dtd">
-  %globalDTD;
-  <!ENTITY % brandDTD SYSTEM "chrome://branding/locale/brand.dtd">
-  %brandDTD;
-  <!ENTITY % browserDTD SYSTEM "chrome://browser/locale/browser.dtd">
-  %browserDTD;
-  <!ENTITY % aboutPrivateBrowsingDTD SYSTEM "chrome://browser/locale/aboutPrivateBrowsing.dtd">
-  %aboutPrivateBrowsingDTD;
-]>
-
-<html xmlns="http://www.w3.org/1999/xhtml" class="private">
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <link id="favicon" rel="icon" type="image/png"/>
-    <link rel="stylesheet" href="chrome://browser/content/aboutPrivateBrowsing.css" type="text/css" media="all"/>
-    <link rel="stylesheet" href="chrome://browser/skin/privatebrowsing/aboutPrivateBrowsing.css" type="text/css" media="all"/>
-    <script type="application/javascript" src="chrome://browser/content/aboutPrivateBrowsing.js"></script>
+    <meta charset="utf-8">
+    <title>Prakhar Ojha, UIUC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/homepage.css" rel="stylesheet">
+
+
+
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- Template Author: Irshad Pananilath -->
+
+    <link rel="shortcut icon" href="assets/ico/csa.ico">
+	<style>
+        a {
+            text-decoration: none;
+            color: #069;
+        }
+        .news{
+          height:112px;
+
+        }
+        .navigationbar1{
+        	background-color: #3D55B5;
+        }
+        
+
+
+	</style>
+
   </head>
 
-  <body dir="&locale.dir;">
-    <p class="showNormal">&aboutPrivateBrowsing.notPrivate;</p>
-    <button xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
-            id="startPrivateBrowsing"
-            class="showNormal"
-            label="&privatebrowsingpage.openPrivateWindow.label;"
-            accesskey="&privatebrowsingpage.openPrivateWindow.accesskey;"/>
-    <div class="showPrivate container">
-      <h1 class="title">
-        <span id="title">&privateBrowsing.title;</span>
-        <span id="titleTracking">&privateBrowsing.title.tracking;</span>
-      </h1>
-      <section class="section-main">
-        <p>&aboutPrivateBrowsing.info.notsaved.before;<strong>&aboutPrivateBrowsing.info.notsaved.emphasize;</strong>&aboutPrivateBrowsing.info.notsaved.after;</p>
-        <div class="list-row">
-          <ul>
-            <li>&aboutPrivateBrowsing.info.visited;</li>
-            <li>&aboutPrivateBrowsing.info.cookies;</li>
-            <li>&aboutPrivateBrowsing.info.searches;</li>
-            <li>&aboutPrivateBrowsing.info.temporaryFiles;</li>
-          </ul>
-        </div>
-        <p>&aboutPrivateBrowsing.info.saved.before;<strong>&aboutPrivateBrowsing.info.saved.emphasize;</strong>&aboutPrivateBrowsing.info.saved.after2;</p>
-        <div class="list-row">
-          <ul>
-            <li>&aboutPrivateBrowsing.info.bookmarks;</li>
-            <li>&aboutPrivateBrowsing.info.downloads;</li>
-          </ul>
-        </div>
-        <p>&aboutPrivateBrowsing.note.before;<strong>&aboutPrivateBrowsing.note.emphasize;</strong>&aboutPrivateBrowsing.note.after;</p>
-      </section>
+  <body>
 
-      <h2 id="tpSubHeader" class="about-subheader">
-        <span class="tpTitle">&trackingProtection.title;</span>
-        <input id="tpToggle" class="toggle toggle-input" type="checkbox"/>
-        <span id="tpButton" class="toggle-btn"></span>
-      </h2>
-
-      <section class="section-main">
-        <p>&trackingProtection.description2;</p>
-        <p>
-          <a id="startTour" class="button">&trackingProtection.startTour1;</a>
-        </p>
-      </section>
-
-      <section class="section-main">
-        <p class="about-info">&aboutPrivateBrowsing.learnMore3.before;<a id="learnMore" target="_blank">&aboutPrivateBrowsing.learnMore3.title;</a>&aboutPrivateBrowsing.learnMore3.after;</p>
-      </section>
-
+    <div class="navbar navbar-inverse navbar-fixed-top" id="navigationbar">
+      <div class="navbar-inner csa-navbar-inner" id="navigationbar1">
+      </div>
     </div>
+
+    <div class="container">
+
+      <header>
+        <div class="row">
+          <div class="span2 visible-desktop visible-tablet">
+            <a href="http://www.cs.illinois.edu/" target="_blank"><img src="assets/img/csa-logo.png" class="img-polaroid"></a>
+          </div>
+          <div class="span8 csa-center">
+            <!-- <h2> <span style="color: #3656A2">Department of Computer Science </span></h2>
+            <h3><span style="color: #D97401">University of Illinois at Urbana–Champaign </span></h3> -->
+            <h2>Department of Computer Science </h2>
+            <h3>University of Illinois at Urbana–Champaign </h3>
+          </div>
+          <div class="span2 visible-desktop visible-tablet">
+            <a href="http://www.illinois.edu/" target="_blank"><img src="assets/img/iisc-logo.png" width="85" class="img-polaroid pull-right"></a>
+          </div>
+        </div>
+      </header>
+
+       <div class="row-fluid">
+        <div class="navbar csa-navbar">
+              <div class="navbar-inner">
+                <div class="container-fluid">
+                  <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </a>
+                  <div class="nav-collapse">
+                    <ul class="nav">
+                      <li><a href="index.html"><b>Home</b></a></li>
+                      <li><a href="#research"><b>Research</b></a></li>
+                      <li><a href="#education"><b>Education</b></a></li>
+                      <li><a href="#publications"><b>Publications</b></a></li>
+                      <li><a href="#awards"><b>Awards</b></a></li>
+                      <li><a href="projects/index.html"><b>Projects</b></a></li>
+                      <li><a href="cv/CV_prakharOjha_4_ebaf.pdf"><b>Resume</b></a></li>                      
+                <!--  <li><a href="cv/CV_prakharOjha_4_yrbg.pdf">Resume</a></li> -->
+                <!--  <li><a href="cv/CV_prakharOjha_3_sget.pdf">Resume</a></li> -->                      
+                    </ul>
+                  </div><!-- /.nav-collapse -->
+                </div>
+              </div><!-- /navbar-inner -->
+            </div><!-- /navbar -->
+      </div>
+
+      <div class="row-fluid">
+        <div class="well span12" >
+        <div class="span4 csa-center">
+          <img src="pics/prakhar_ojha.jpg" width="160" class="img-polaroid">
+          <!-- <img src="pic1.jpg" width="120" class="img-polaroid"> -->
+        </div>
+        <div class="span8">
+          <h3>Prakhar Ojha</h3>
+          <p>Graduate Doctoral Student<br>
+          <a href="http://dais.cs.illinois.edu"  target="_blank">Data and Information Systems Group</a><br>          
+          <!-- Dynamic Crowd Lab<br> -->
+
+          <!-- <a href="http://"  target="_blank">Dynamic Crowd Lab</a><br> -->
+           <span>&#9993;</span> <a href="mailto:pojha2@illinois.edu">pojha2@illinois.edu</a>
+<!--          <a href="http://www.csa.iisc.ernet.in">Department of Computer Science & Automation</a><br>
+          <a href="http://www.iisc.ernet.in">Indian Institute of Science, Bangalore</a>
+-->
+          </p>
+          <!-- <p class="csa-justify span10">Describe yourself here.</p> -->
+        </div>
+        </div>
+      <div class="row">
+      </div>
+
+
+    <div class="span10 offset1" id="news">
+      <h4 class="csa-section"> <span style="color: #3656A2">News and Activities  </span> </h4> 
+      
+        <div class="pre-scrollable news">
+          <ul>
+
+          	
+			<li> Sep 2017: Presenting our work on Knowledge Graph Evaluation at <a href="http://emnlp2017.net"  target="_blank">EMNLP'17</a>, Copenhagen Denmark .</li>
+
+			<li> Feb 2017: <a href="http://economictimes.indiatimes.com/small-biz/startups/iisc-researchers-developing-machine-that-can-understand-worldview/articleshow/57320194.cms"  target="_blank">The Economic Times</a> covers the vision of on-going work in MALL lab. [<a href="papers/media_mall17.pdf"  target="_blank" >pageview</a>]</li>
+
+          	<li> Feb 2017: Presenting a full-paper poster at <a href="http://www.aaai.org/Conferences/AAAI/aaai17.php"  target="_blank">AAAI-2017</a>, San Fransisco. [<a href="papers/pstr_aaai17.pdf"  target="_blank" >poster</a>]</li>
+
+          	<li> Jan 2017: Visiting <a href="http://cmu.edu/"  target="_blank">Carnegie Mellon Univ.</a> as a research associate to work with <a href="https://www.andrew.cmu.edu/user/gatt/" target="_blank">Dr. Wolfgang Gatterbauer</a> on Large-scale Graph Inference.</li>
+
+          	<li> Jan 2016: Selected for <a href="http://www.jagritiyatra.com" target="_blank" >Jagriti Yatra 2016</a>, excited to be a part of this two weeks nation-building train journey. </li>
+
+			<li> Dec 2016: KGEval accepted for Oral Presentation [rate 9%]  at  <a href="https://ikdd.acm.org/cods2017/accepted.html"  target="_blank">CODS-2017</a> </li>
+ 
+            <li> Dec 2016: Prof. <a href="http://www.cs.cmu.edu/~tom/"  target="_blank">Tom Mitchell</a> visited our lab. Great to present our work to him. [<a href="pics/TM_visit.jpg"  target="_blank" >picture</a>]</li>
+
+            <li> Nov 2016:  <a href="http://malllabiisc.github.io/news/prakhar-hcomp2016.html"  target="_blank">Trip Report for HCOMP and CMU visit.</a></li>
+
+            <li> Nov 2016: Talk at <a href="http://db.cs.cmu.edu/events/db-seminar-fall-2016-prakhar-ojha/"  target="_blank">DB seminar</a> and <a href="http://bt.tepper.cmu.edu/seminar/"  target="_blank">BT seminar</a>, Carnegie Mellon University. </li>
+
+            <li> Nov 2016: Attending <a href="http://www.humancomputation.com/2016/"  target="_blank">HCOMP-2016</a> and <a href="http://www.emnlp2016.net/"  target="_blank">EMNLP-2016</a> held at Austin, TX. [<a href="http://malllabiisc.github.io/news/prakhar-hcomp2016.html" target="_blank" >Trip Report</a>]</li>  
+
+<!--
+            <li> Oct 2016: Presented my work at departmental seminar <a href="http://www.csa.iisc.ernet.in/sem-evts/seminars.php#2016-10-25-1130-03"  target="_blank">MSc Colloquium </a>series. </li>
+-->         
+
+            <li> Oct 2016: Won the Best Poster Award at <a href="http://icare2016.mybluemix.net/"  target="_blank">IBM I-CARE 2016,</a> IBM Research. [<a href="pics/icare_2016.jpg"  target="_blank" >picture</a>]</li>
+            
+            <li> Sep 2016: Received travel scholarship from Microsoft Research to participate in HCOMP, 2016, Thanks Microsoft!</li>
+            
+            <li> Sep 2016: Attending Very Large Data Bases <a href="http://vldb2016.persistent.com/" target="_blank" >VLDB-2016,</a> New Delhi. Thanks IISc for supporting my travel. [<a href="news/vldb_trip.pdf" target="_blank" >Trip Report</a>]</li>
+            
+            <li> Aug 2016: Our <a href="http://talukdar.net/papers/hcomp16_ojha_talukdar.pdf"  target="_blank">paper</a> on Quality Control in Collaborative Crowdsourcing is accepted at <a href="http://www.humancomputation.com/2016/" target="_blank"   >HCOMP-16.</a> </li>
+
+            <li> Jul 2016: Invited talk "Inference in Large Knowledge Graphs" at <a href="http://events.csa.iisc.ernet.in/summerschool2016/"  target="_blank">Undergraduate Summer School on Computer Science, IISc</a>.</li>
+
+            <li>Apr 2016: Won Best Poster Award at Joint Research Students Symposium of Electrical Division <a href="http://www.ece.iisc.ernet.in/~divsymposium/EECS2016/"> EECS-2016</a>. [<a href="http://www.ece.iisc.ernet.in/~divsymposium/EECS2016/posters-2016-04-25/EECS2016_paper_36.pdf" target="_blank">poster</a>] [<a href="pics/eecs_2015.jpg"  target="_blank" >picture</a>]</li>
+
+            <li> Mar 2016: Attending IKDD Conference on Data Science <a href="http://ikdd.acm.org/Site/CoDS2016/"  target="_blank">CODS-2016,</a> Pune, India. Thank you IISc for supporting my travel.</li>
+
+            <li>Jan 2016: Our <a href="http://malllabiisc.github.io/"  target="_blank">MALL lab</a> secures 10th position worldwide in the <a href="https://www.kaggle.com/c/the-allen-ai-science-challenge">Allen AI Science Challenge</a>. Checkout the <a href="http://mall-lab.serc.iisc.in/ensemble/">demo!</a></li>
+
+            <li>Aug 2015: Invited to Extreme Classification Workshop organized by Microsoft Research, India. Learning with large number of labels.</li>
+
+            <li>Jul 2015: Attending Summer School on Applied Mathematics organized by Indo-French Center For Applied Mathematics <a href=http://math.iisc.ac.in/~ifcam/SS_POSTER_2015.pdf  target="_blank">IFCAM-2015</a>. Brilliant camp and amazing lectures!</li>
+
+            <li>Jun 2015: Attending <a href=https://www.microsoft.com/en-us/research/event/msr-india-summer-school-2015-on-machine-learning/  target="_blank">MSR India Summer School 2015</a> on Machine Learning organized by Microsoft Research.</li>
+
+            <li>Jan 2015: Invited to Symposium on Learning, Algorithms and Complexity organized by <a href=http://math.iisc.ernet.in/~nmi/Symp.php  target="_blank"> National Mathematic Initiative (NMI)</a>. Tradeoffs between computational and statistical complexity.</li>
+
+            <li> Nov 2014: Joined <a href="http://malllabiisc.github.io/"  target="_blank">MALL lab</a> for my masters research under <a href="http://talukdar.net" target="_blank">Dr. Partha P Talukdar</a>. Excited to work on interesting problems!</li>
+
+            <li> Aug 2014: Joined Indian Institute of Science <a href="http://www.iisc.ac.in/" target="_blank">IISc, Bangalore </a> as a research student.</li>
+        </ul>
+        </div>
+        <br>
+    </div>
+
+
+
+
+        <div class="span10 offset1" id="research">
+          <h4 class="csa-section"> <span style="color: #3656A2">Research Interests </span></h4>
+          <p>
+		  <b>Machine Learning:</b> Inference, Knowledge Graphs, Knowledge Representation<br>
+          <b>Crowdsourcing:</b> Collaborative tasks, Team formation<br>
+		  <b>Applications:</b> Question Answering, Network analysis<br>
+ 
+             <!-- <b>Stochastic optimization:</b> Smoothed functional algorithms -->
+          </p>
+          <!-- <p>Second paragraph if you have lots of information to add.</p> -->
+        </div>
+
+
+
+
+<div class="span10 offset1" id="education">
+          <h4 class="csa-section"><span style="color: #3656A2">Education </span></h4>
+          
+          <p>Ph.D., &nbsp; Dept. of Computer Science &nbsp; &nbsp;  <b>Aug 2017 - Present</b><br> 
+             <b> University of Illinois at Urbana–Champaign</b>, <a href="http://www.illinois.edu/"  target="_blank"> UIUC </a>  <br>
+		     <i>Research Group:</i> Data and Information Systems 
+             
+          </p> 
+
+
+          <p>MSc. Engg, &nbsp; Dept. of Computer Science & Automation &nbsp; &nbsp;  <b>Aug 2014 - Dec 2016</b><br> 
+             <b> Indian Institute of Science</b>, <a href="http://www.iisc.ac.in/"  target="_blank"> IISc Bangalore </a>  <br>
+		     <i>Advisor:</i> <a href="http://talukdar.net" target="_blank">Prof. Partha Talukdar</a><br>
+             <i>Thesis:</i> Utilizing Worker Groups And Task Dependencies In Crowdsourcing 
+          </p> 
+
+
+          <p>B.Tech, &nbsp; Dept. of Computer Science Engineering &nbsp; &nbsp; <b>Jul 2010 - May 2014</b><br>
+             <b>National Institute of Technology Karnataka</b>, <a href="http://www.nitk.ac.in/"  target="_blank"> NITK Surathkal </a>  <br> 
+             <i>Advisor:</i> <a href="http://cse.nitk.ac.in/faculty/vani-m"  target="_blank">Prof. Vani M</a><br>
+             <i>Thesis:</i> Reinforcement Learning based Schedulers<br>
+          </p> 
+          <!-- <p>12th details</p> -->
+        </div>
+
+
+        <div class="span10 offset1" id="publications">
+          <h4 class="csa-section"><span style="color: #3656A2">Publications </span></h4>
+
+		  <ol>
+
+		  	<li>
+		  		Prakhar Ojha, and Partha Talukdar. 
+		  		<b>Estimating Accuracy of Automatically Constructed Knowledge Graphs.</b> 
+		  		International Conference on Empirical Methods in Natural Language Processing (EMNLP) 2017, Cohenhagen, Denmark. 
+		  		[<a href="http://aclweb.org/anthology/D17-1183"  target="_blank">pdf</a>]
+		  		[<a href="bib/emnlp17.bib">bib</a>]
+			  	<!-- -- Accepted for Oral Presentation [rate 9%] at <a href="https://ikdd.acm.org/cods2017/accepted.html" target="_blank">CODS-2017</a>. -->
+				  
+			</li>
+
+		  	<li>
+			  	Prakhar Ojha, and Partha Talukdar. 
+			  	<b>Quality Estimation of Workers in Collaborative Crowdsourcing Using Group Testing. </b>
+			  	The Fourth AAAI Conference on Human Computation and Crowdsourcing (HCOMP) 2016, Austin, TX. 
+			  	[<a href="https://aaai.org/ocs/index.php/HCOMP/HCOMP16/paper/viewFile/14026/13644">pdf</a>]  
+			  	[<a href="bib/hcomp16.bib">bib</a>]<br>
+			</li>
+		  
+		  	<li>
+			  	Prakhar Ojha, Siddhartha R Thota, Vani M, Mohit P Tahilliani. 
+			  	<b>Learning Scheduler Parameters for Adaptive Preemption.</b> 
+			  	International Conference on Advanced Information Technologies and Applications (ICAITA) 2015, Dubai. 
+			  	[<a href="http://airccj.org/CSCP/vol5/csit54613.pdf">pdf</a>]  
+			  	[<a href="bib/icaita15.bib">bib</a>]<br>
+			</li>
+
+		  </ol>
+		
+		<br> 
+
+
+		<!-- <p><b>Under Review</b></p>
+			<ol>
+			  <li>
+			  		Prakhar Ojha, and Partha Talukdar.  <b>Estimating Accuracy of Automatically Constructed Knowledge Graphs.</b> [<a href="https://arxiv.org/abs/1610.06912"   target="_blank">arXiv pre-print v2</a>]  [<a href="https://arxiv.org/abs/1610.06912v1"   target="_blank">v1</a>]
+				  	-- Accepted for Oral Presentation <span style="color: #ff0000">[rate 9%]</span> at  <a href="https://ikdd.acm.org/cods2017/accepted.html"  target="_blank">CODS-2017</a> </li>
+				  
+				</li>
+
+		  	</ol> -->
+
+        </div>
+
+        <br> 
+
+        
+
+
+        <div class="span10 offset1" id="awards">
+	         <h4 class="csa-section"><span style="color: #3656A2">Awards </span></h4>
+			 <ul>
+				  <li> 
+				  	Best Poster Award at IBM Collaborative Academia Research Exchange Conference <a href="http://icare2016.mybluemix.net/"  target="_blank">I-CARE 2016,</a> IBM Research.
+				  </li>
+
+		          <li> 
+		          	Microsoft Research Travel Grant to attend <a href="http://www.humancomputation.com/2016/"  target="_blank">HCOMP-16,</a> Thanks Micrsoft!.
+		          </li>
+
+		          <li> 
+		          	Best Poster Award at Joint Research Students Symposium of Electrical Division <a href="http://www.ece.iisc.ernet.in/~divsymposium/EECS2016/"  target="_blank">EECS-2016,</a> IISc.
+		          </li>
+
+		          <!-- <li> Secured 449th All India Rank in Graduate Aptitude Test in Engineering, Computer Science (GATE-CS), 2014.</li> -->
+	         </ul>  
+        </div>
+
+        <br> 
+
+
+
+
+  
+        <div class="span10 offset1" id="talks">
+          <h4 class="csa-section"><span style="color: #3656A2">Talks </span></h4>
+		  <ul>
+
+	          <li> 
+		          Databases <a href="http://db.cs.cmu.edu/events/db-seminar-fall-2016-prakhar-ojha/"  target="_blank">(DB) seminar series</a>, SCS, CMU; 
+		          &nbsp; Nov 2016;
+		          &nbsp; <b>Topic:</b> Utilizing Worker Groups And Task Dependencies In Crowdsourcing.
+	          </li>
+
+	          <li> 
+		          Business Technology <a href="http://bt.tepper.cmu.edu/seminar/"  target="_blank">(BT) seminar series</a>, Tepper, CMU; 
+		          &nbsp; Nov 2016;
+		          &nbsp; <b>Topic:</b> Quality Estimation of Workers in Collaborative Tasks Using Group Tests.
+	          </li>
+
+	          <li> 
+		          Department <a href="http://www.csa.iisc.ernet.in/sem-evts/seminars.php#2016-10-25-1130-03"  target="_blank">Colloquium series</a>, Computer Science & Automation, IISc; 
+		          &nbsp; Oct 2016;
+		          &nbsp; <b>Topic:</b> MSc Colloquium series
+	          </li>
+
+	          <li> 
+		          Conference <a href="http://www.humancomputation.com/2016/"  target="_blank">HCOMP 2016</a>, Austin, Texas; 
+		          &nbsp; Nov 2016;
+		          &nbsp; <b>Topic:</b> Quality Estimation of Workers in Collaborative Tasks Using Group Tests.
+	          </li>
+
+	          <li> 
+		          <a href="http://events.csa.iisc.ernet.in/summerschool2016/"  target="_blank">Undergraduate Summer School</a>, CSA, IISc; &nbsp; Jul 2016; 
+		          &nbsp; <b>Topic:</b> Inference in Large Knowledge Graphs.
+	          </li>
+
+		  </ul>
+        </div>
+
+       
+
+
+        <div class="span10 offset1" id="contact">
+          <h4 class="csa-section"><span style="color: #3656A2">Contact </span></h4>
+          <!-- <div class="span3"> -->
+
+          		Room 2113A, Thomas Siebel Center for CS <br>
+		        University of Illinois at Urbana-Champaign <br>
+				201 North Goodwin Avenue <br>
+				Urbana, IL 61801-2302 <br>
+		            
+            
+<!--           </div> -->
+
+        </div>
+
+
+        <div class="span3 offset1">
+
+
+        <br>
+
+
+
+          	<a href="mailto:prakhar.ojha.992@gmail.com" target="_blank"> <img src="assets/ico/gmail.png" height="32" width="32" ></a> &emsp;
+          	<a href="https://scholar.google.co.in/citations?user=9WI7t38AAAAJ" target="_blank"> <img src="assets/ico/gScholar.jpg" height="28" width="28" > </a> &emsp;
+          	<a href="https://in.linkedin.com/in/prakhar-ojha-82495911b" target="_blank"> <img src="assets/ico/linkedin.png" height="28" width="28" > </a>
+
+<!--
+            <p><i class="icon-signal"></i> (123)456-7890</p>
+            <p><i class="icon-globe"></i> www.csa.iisc.ernet.in</p>
+            <p><i class="icon-envelope"></i> debarghya.g@csa.iisc.ernet.in</p>
+
+            <br>
+            <br>
+-->
+			<br>
+			<br>
+			<br>
+
+          </div>
+        </div>
+
+      </div>
+
+      <hr>
+
+      <footer class="csa-center">
+        <small>&copy; CSA, 2017</small>
+      </footer>
+
+    </div> <!-- /container -->
+
+    <script src="assets/js/jquery-1.8.1.min.js"></script> 
+
+    <script src="assets/js/bootstrap.min.js"></script>
+
   </body>
 </html>
